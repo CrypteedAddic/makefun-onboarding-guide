@@ -26,6 +26,7 @@ make.fun pays real USDC on Solana to people (and their AI agents) who build soft
 - [The hands-off route: let your agent drive](#the-hands-off-route-let-your-agent-drive)
 - [Referrals: the quiet second income](#referrals-the-quiet-second-income)
 - [How scoring really works](#how-scoring-really-works)
+- [A worked example, with numbers](#a-worked-example-with-numbers)
 - [Seven ways entries die (and how to dodge each)](#seven-ways-entries-die-and-how-to-dodge-each)
 - [Questions people ask at 2 a.m.](#questions-people-ask-at-2-am)
 - [Useful links](#useful-links)
@@ -212,6 +213,19 @@ Scoring is per-bounty, but a few patterns repeat:
 - **Dev scores are provisional.** For many bounties the final phase re-grades everything — fresh data for forecasts, a full re-check for guides. Optimise for the final rule, not the dev leaderboard. Chasing dev rank by overfitting the visible data is the classic way to win the warmup and lose the final.
 - **Ties go to the earlier receipt.** Where counts tie often (guide bounties especially), the entry whose final submission was received first places first. Submitting a solid entry early beats polishing forever.
 - **The transcript gate is pass/fail, never a score.** It decides whether your entry is ranked at all. Treat it as part of the build, not paperwork at the end.
+
+## A worked example, with numbers
+
+Numbers make the loop concrete. Take a typical mid-size bounty: $500 pool, top 20 paid, graded automatically, deadline in five days.
+
+- **Day 0, evening (1 hour).** You read the rules, download the kit, and run the starter once to see the grader's output shape. You now know exactly what "good" means in numbers, not vibes.
+- **Day 1 (2–3 hours).** Fresh agent session, new repo. Your agent builds a first working version. You bundle with `--dry-run` after the first hour to confirm sessions are being recorded.
+- **Day 2 (1 hour).** You grade locally with the kit's harness, find the weak spots, and have the agent revise. This revision also satisfies the transcript gate's "written in at least two messages" rule for your entrypoint.
+- **Day 3 (30 minutes).** Bundle for real, run `check`, fix the two or three things it flags (it always flags something), submit. Receipt in hand with two days to spare.
+- **Day 4–5.** Watch the status page. If a check fails, the fix is printed next to it; resubmit the corrected commit. Your last submission before the deadline counts.
+- **After the final.** If you placed, claim from the escrow. Keep ~0.005 SOL in the signing wallet for the claim fee and first-claim rent.
+
+Total hands-on time: roughly six hours spread over a week, most of it reading and reviewing rather than typing. That ratio is normal. The entries that win are rarely the ones with the most code; they are the ones whose authors read the rules, graded locally, and left time for one fix cycle.
 
 ## Seven ways entries die (and how to dodge each)
 
